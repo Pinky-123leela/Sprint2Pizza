@@ -14,7 +14,7 @@ export class AdminCouponListComponent implements OnInit {
  
   private error! : string
   private id:number=0;
-  constructor(private service:CouponService,private router:Router) { }
+  constructor(private service:CouponService,private _router:Router) { }
    
     ngOnInit(): void {
        this.service.getAllCoupons().subscribe(
@@ -24,7 +24,7 @@ export class AdminCouponListComponent implements OnInit {
       )  
    
     }
-    onEdit(coupon:Coupon){this.router.navigate(['edit-coupon',coupon.id])}
+    onEdit(coupon:Coupon){this._router.navigate(['edit-coupan',coupon.id])}
     
     onDelete(coupon:Coupon):void{
        this.service.deleteCouponById(coupon.id)
@@ -36,8 +36,11 @@ export class AdminCouponListComponent implements OnInit {
     
             
     addCoupon(){
-      this.router.navigate(['add-coupon'])
+      this._router.navigate(['add-coupan'])
    
+    }
+    onBack(){
+      this._router.navigate(['admin'])
     }
           
         

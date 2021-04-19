@@ -11,6 +11,7 @@ export class CustomerComponent implements OnInit,OnDestroy{
 
     sub!:Subscription;
     customers:Customer[]=[];
+    _router: any;
 
     constructor(private custService:CustomerService){}
 
@@ -24,5 +25,6 @@ export class CustomerComponent implements OnInit,OnDestroy{
     ngOnDestroy(){
        this.sub.unsubscribe(); 
     }
+    
 
 }

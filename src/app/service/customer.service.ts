@@ -9,14 +9,14 @@ import { Customer } from "../customer/Customer";
 
 export class CustomerService{
 
-    backendUrl:string='http://localhost:8080/onlinepizza/'
+    backendUrl:string='http://localhost:9595/onlinepizza/'
     constructor(private http:HttpClient){}
 
     getCustomer():Observable<Customer[]>
     {
         const headers = new HttpHeaders({ Authorization: 'Bearer ' + sessionStorage.getItem('token') });
         console.log("test call");
-        return this.http.get<Customer[]>(this.backendUrl+'getAll');
+        return this.http.get<Customer[]>(this.backendUrl+'customers');
     }
 
     register(customer:Customer)

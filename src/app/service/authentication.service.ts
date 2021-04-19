@@ -15,7 +15,7 @@ export class User {
 
 export class AuthenticationService {
   user!: User;
-  private baseUrl = 'http://localhost:8080/onlinepizza'
+  private baseUrl = 'http://localhost:9595/onlinepizza'
 
   constructor(private http: HttpClient) { }
 

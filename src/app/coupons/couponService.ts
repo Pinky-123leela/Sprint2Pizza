@@ -7,7 +7,7 @@ import {Coupon} from './Coupon'
   providedIn: 'root'
 })
 export class CouponService {
-public baseUrl:string = "http://localhost:8080/onlinepizza"
+public baseUrl:string = "http://localhost:9595/onlinepizza"
   constructor(private http:HttpClient) { }
  
   getAllCoupons():Observable<Coupon[]>{

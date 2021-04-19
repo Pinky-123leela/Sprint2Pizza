@@ -17,5 +17,14 @@ export class AdminComponent implements OnInit {
     this.router.navigate(['admin/add-coupan'])
 
   }
+  gotocustomer(){
+    this.router.navigate(['admin/customers'])
+
+  }
+  gotoorder(){
+    this.router.navigate(['admin/orders'])
+
+  }
+
 
 }
